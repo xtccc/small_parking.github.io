@@ -13,6 +13,6 @@ echo -n "开始commit:"
 git commit -m $input
 
 echo -n "开始push:"
-git push
+proxychains git push
 
 exit
