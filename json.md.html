@@ -1,0 +1,43 @@
+
+
+<!--
+ * @Author: small_parking
+ * @Date: 2020-05-30 21:42:33
+ * @LastEditors: small_parking
+ * @LastEditTime: 2020-05-30 21:52:54
+--> 
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+# 学习JSON
+
+# json.dumps 从dict生成一个json对象
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+person_dict = {'first': 'Christopher','last':'Harrison'}
+
+lanuages_list = ['CSharp','python','JavaScript']
+
+person_dict['languages']=lanuages_list
+import json
+person_json = json.dumps(person_dict)# json.dumps 从dict生成一个json对象
+
+print(person_json)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# json.loads 从一个json对象生成为python对象
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print(type(json.loads(person_json)))
+
+print(json.loads(person_json)) # json.loads 从一个json对象生成为python对象
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>

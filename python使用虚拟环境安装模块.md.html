@@ -4,7 +4,7 @@
  * @Author: small_parking
  * @Date: 2020-05-30 15:28:38
  * @LastEditors: small_parking
- * @LastEditTime: 2020-05-30 15:49:11
+ * @LastEditTime: 2020-05-30 21:58:58
 --> 
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
 
@@ -15,25 +15,30 @@
 
 因为pip 直接安装 即 pip install xxxx 是安装到Global 全局的环境之中。
 
-# 前置需求 ：pip install virtualenv 
-
+# 前置需求 ：
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pip install virtualenv 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 设置python虚拟环境
 - python 的虚拟环境 本质是一个文件夹 So：删除直接 rm -rf 即可
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 windwos :python3 -m venv path\venv
+
 linux : virtualenv path/venv
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 进入虚拟环境
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 windows：.\venv\Scripts\activate.ps1
 
-linux : source ./venv/bin/activate
 
+linux : source ./venv/bin/activate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 PS:进入后虚拟环境后,终端前会有 “（venv)”的字样
 
 # 安装所需要的外部包
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 pip install -r requirements.txt
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     requirements.txt 内容： 
     
     - colorma 
