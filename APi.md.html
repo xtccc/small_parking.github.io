@@ -1,0 +1,58 @@
+
+
+<!--
+ * @Author: small_parking
+ * @Date: 2020-05-30 15:59:19
+ * @LastEditors: small_parking
+ * @LastEditTime: 2020-05-30 16:27:41
+--> 
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+# API 是什么
+- Application Programming Interface 应用程序编程接口 -- 不准确
+- 存储到互联网服务器上的函数 -- 简化版
+
+# 如何使用API
+- 知道服务器地址和函数名（模块名）和需求的参数
+- 查看API的文档，了解调用函数（API）的方式。
+
+# 限制or不限制访问API
+## 通过密钥（keys)限制
+- 当调用API时，也写入key的值，能让API提供方识别调用的用户
+
+# 调用API的方式
+## 对于Http（超文本传输协议，HyperText Transfer Protocol）有两种方式：GET,POST
+###  GET 
+- 只能传递qurey string 像'\'这样的符号要转义
+- 限制了数据的长度（amount）
+
+###  POST
+- 能传递 query string 和 body（可以带有文件ex:图片）
+- 不需转义
+- 能传大量数据
+-- 一般都用POST
+
+# 以requestt库发起POST请求为例子：
+ps ：pip install requests
+requests.post(address,http_headers,function_parameters,message_body) # 这四个参数在API文档上都有，自己看
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
