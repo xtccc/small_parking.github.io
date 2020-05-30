@@ -1,0 +1,60 @@
+
+
+<!--
+ * @Author: small_parking
+ * @Date: 2020-05-30 23:29:12
+ * @LastEditors: small_parking
+ * @LastEditTime: 2020-05-30 23:41:39
+--> 
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+
+[首页][blog_link]
+
+# 如何理解装饰器
+- 函数或方法更像是动词
+- 对象像是名词
+- 而装饰器像是形容词
+# 装饰器最常用于的方面
+- 给你的代码额外加些功能
+- 在你创建一个框架时，会创建一个装饰器
+- 你一般不会创建一个装饰器，一般都是使用他人写好的装饰器
+# 例子：
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+def logger (func):
+    def wrapper():
+        print('Logging execution')
+        func()
+        print('Done logging')
+    return wrapper
+
+
+@logger
+def samgle():
+    print('--Inside sample function')
+
+>>> samgle()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Python
+Logging execution
+--Inside sample function
+Done logging
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
