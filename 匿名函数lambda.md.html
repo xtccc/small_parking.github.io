@@ -1,0 +1,51 @@
+
+
+<!--
+ * @Author: small_parking
+ * @Date: 2020-05-31 13:43:37
+ * @LastEditors: small_parking
+ * @LastEditTime: 2020-05-31 13:48:33
+--> 
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+# 匿名函数 lambda 一行代码实现一个简单函数的功能
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+presentesr = [
+    {'name': 'Susan', 'age': 50},
+    {'name': 'Christopher','age': 47}
+]
+def sorter(item: dict) -> dict:
+    return item['name']
+
+presentesr.sort(key=sorter)
+print(presentesr)
+
+print()
+#lambda parameter_list: expression
+presentesr.sort(key=lambda item: len(item['name']))
+print(presentesr)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[{'name': 'Christopher', 'age': 47}, {'name': 'Susan', 'age': 50}]
+
+[{'name': 'Susan', 'age': 50}, {'name': 'Christopher', 'age': 47}]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
