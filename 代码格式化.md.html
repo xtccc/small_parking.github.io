@@ -1,0 +1,56 @@
+
+
+<!--
+ * @Author: small_parking
+ * @Date: 2020-05-31 12:56:08
+ * @LastEditors: small_parking
+ * @LastEditTime: 2020-05-31 13:28:27
+--> 
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+
+# 为什么要格式化代码
+- 保持代码更可读。
+# 怎么保持？
+- 使用Linting
+python‘s is  Pylint
+~~~~~~~~~~
+pip install pylint
+~~~~~~~~~~~
+#　vscode 代码保存后自动运行pylint
+- 使用　ctrl + shift + p 输入linting 可启用／不启用pylint
+# 类型提示 Type hints　｜ 文档字符串　Doc string
+~~~~~~~~~~~~~~~~~~~~~~python
+def print_hello(name:str) -> str:
+    """
+    Returns a greeting
+    
+    Parameters:
+        name(str): The name of the person
+    Returns:
+        The cool message
+    """
+    print('Hello, ' + name)
+
+
+print_hello('tian')
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
