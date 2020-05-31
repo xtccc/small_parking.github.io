@@ -1,0 +1,74 @@
+
+
+<!--
+ * @Author: small_parking
+ * @Date: 2020-05-31 14:39:17
+ * @LastEditors: small_parking
+ * @LastEditTime: 2020-05-31 14:42:39
+--> 
+
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+
+
+# 未加权限控制的类
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~python
+class presenter():
+    def __init__(self,name:str):
+        self.name = name
+
+    def say_hello(self) -> str:
+
+        print('Hello, ' + self.name)
+
+presenter = presenter('tt')
+presenter.name = 'tian' #这一步，动态更新了 self.name
+presenter.say_hello()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Hello, tian
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 类权限控制的解释
+- 通过写两个装饰器，@property @.setter 重写 get 和 set 方法，可以便捷的对 类的属性的get 和 set 进行控制
+# 加了权限控制的类
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+class presenters():
+    def __init__(self,name):
+        self.name = name
+
+    @property
+    def name(self):
+        print('Use the get')
+        return self.__name
+    # 我认为必须是“__变量”的原因是：这个函数是将self.name 变成 这个函数 因此不能 用self.name ,不然会产生嵌套无限递归
+
+    @name.setter
+    def name(self, value):
+        print('Use the set')
+        self.__name = value
+
+    def say_hello(self):
+        print('Hello ' + self.name)
+
+
+presenters = presenters('cc')
+presenters.name = 'chang'
+presenters.say_hello()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use the set
+Use the set
+Use the get
+Hello chang
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
