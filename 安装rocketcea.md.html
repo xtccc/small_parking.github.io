@@ -1,0 +1,69 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+**安装rocketcea (python的库)**
+
+## 安装mingw64，anaconda ;无需安装visual studio c++ 14
+
+
+
+##  anaconda 创建新环境 conda create -n pyenv python=3.6
+
+##  环境变量设置
+
+### 打开一个cmd
+
+### SET "MYPYTHONPATH=C:\Users\xtcc\anaconda3\envs\pyenv" 
+
+
+
+#### mypythonpath的值是要按照虚拟环境位置自己手动调节
+
+### set PATH=C:\MinGW\mingw64\bin;C:\MinGW\mingw64\lib;%MYPYTHONPATH%;%MYPYTHONPATH%\Scripts
+
+#### mingw64位置放对，用 echo %PATH% 看看结果;用gcc --help看位置是不是对了
+
+![](./图片/image-20200709232622590.png)
+
+#  输入
+
+## pip uninstall -y rocketcea
+
+#  切换到git clone 得到的 RocketCEA的文件夹内
+
+## cd C:\Users\xtcc\Documents\RocketCEA
+
+## RocketCEA是从github下载的  git clone https://github.com/pyca/cryptography.git
+
+#  新开一个cmd  安装nupmy,matplotlib,future,scipy pip install numpy,...
+
+## 不新开cmd会出现以下错误
+
+![](./图片/image-20200709234807580.png)
+
+#  编译设置
+
+## python setup.py build --compiler=mingw32
+
+#  编译c的代码之类的
+
+## python setup.py install 
+
+##  出现 quick test 表示没问题
+
+![](./图片/image-20200709235147599.png)
+
+
+
+#  输入
+
+## python setup.py sdist bdist_wheel
+
+#  手动拷贝
+
+## 将C:\Users\xtcc\anaconda3\envs\pyenv\Lib\site-packages 中的rocketcea-1.1.17-py3.6-win-amd64.egg内的rocketcea 拷贝出来
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
