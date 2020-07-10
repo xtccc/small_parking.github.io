@@ -73,6 +73,13 @@ ps 只有python3.7 会出现此错误，pyhton3.6无需新开cmd，直接跳过�
 ps ： 所有目录都要根据自己的目录更改用户名字
 
 
+# 安装完成，测试下
+
+python -c "from rocketcea.cea_obj import CEA_Obj; C=CEA_Obj(oxName='LOX', fuelName='LH2'); print(C.get_Isp())"
+
+should result in:
+
+374.30361765576265
 
 [blog_link]:https://xtccc.github.io/small_parking.github.io/
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
