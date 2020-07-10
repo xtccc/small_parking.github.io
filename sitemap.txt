@@ -1,0 +1,14 @@
+https://xtccc.github.io/small_parking.github.io/
+https://xtccc.github.io/small_parking.github.io/安装rocketcea.md.html
+https://xtccc.github.io/small_parking.github.io/linux_config.md.html
+https://xtccc.github.io/small_parking.github.io/相对论同时的相对性.md.html
+https://xtccc.github.io/small_parking.github.io/我的吞药方法.md.html
+https://xtccc.github.io/small_parking.github.io/python使用虚拟环境安装模块.md.html
+https://xtccc.github.io/small_parking.github.io/API.md.html
+https://xtccc.github.io/small_parking.github.io/json.md.html
+https://xtccc.github.io/small_parking.github.io/环境变量解决敏感信息.md.html
+https://xtccc.github.io/small_parking.github.io/装饰器.md.html
+https://xtccc.github.io/small_parking.github.io/代码格式化.md.html
+https://xtccc.github.io/small_parking.github.io/匿名函数lambda.md.html
+https://xtccc.github.io/small_parking.github.io/类的属性权限控制.md.html
+https://xtccc.github.io/small_parking.github.io/windows_cmd代理.md.html
