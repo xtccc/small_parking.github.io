@@ -5,17 +5,16 @@
 
 ## 安装mingw64，anaconda ;无需安装visual studio c++ 14
 
-
+# 打开一个cmd
 
 ##  anaconda 创建新环境 conda create -n pyenv python=3.6
 
+### conda activate pyenv
+
 ##  环境变量设置
 
-### 打开一个cmd
 
 ### SET "MYPYTHONPATH=C:\Users\xtcc\anaconda3\envs\pyenv" 
-
-
 
 #### mypythonpath的值是要按照虚拟环境位置自己手动调节
 
@@ -25,23 +24,27 @@
 
 ![](./图片/image-20200709232622590.png)
 
-#  输入
 
 ## pip uninstall -y rocketcea
 
-#  切换到git clone 得到的 RocketCEA的文件夹内
+## 下载RocketCEA  
+### git clone https://github.com/pyca/cryptography.git
 
-## cd C:\Users\xtcc\Documents\RocketCEA
+##  切换到git clone 得到的 RocketCEA的文件夹内
 
-## RocketCEA是从github下载的  git clone https://github.com/pyca/cryptography.git
+### cd C:\Users\xtcc\Documents\RocketCEA
 
-#  新开一个cmd  安装nupmy,matplotlib,future,scipy pip install numpy,...
 
-## 不新开cmd会出现以下错误
+
+#  新开一个cmd  安装nupmy,matplotlib,future,scipy 
+## pip install nupmy,matplotlib,future,scipy 
+ps 只有python3.7 会出现此错误，pyhton3.6无需新开cmd，直接跳过此步骤即可
+
+## 不新开cmd会出现以下错误 
 
 ![](./图片/image-20200709234807580.png)
 
-#  编译设置
+#  编译设置，回到1的cmd中，以下皆为1的cmd中
 
 ## python setup.py build --compiler=mingw32
 
@@ -59,11 +62,17 @@
 
 ## python setup.py sdist bdist_wheel
 
+## 安装基本完成
+
 #  手动拷贝
 
 ## 将C:\Users\xtcc\anaconda3\envs\pyenv\Lib\site-packages 中的rocketcea-1.1.17-py3.6-win-amd64.egg内的rocketcea 拷贝出来
+
+ps ： 所有目录都要根据自己的目录更改用户名字
+
 
 
 [blog_link]:https://xtccc.github.io/small_parking.github.io/
 <style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
 <!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+
