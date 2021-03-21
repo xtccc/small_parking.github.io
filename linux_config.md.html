@@ -4,7 +4,7 @@
 
 **我的linux配置**
 
-我用的是manjaro+i3wm+polybar
+# 我用的是manjaro+i3wm+polybar
 
 
 1.[manjaro][manjaro_link]是一个专业制作的基于Linux的操作系统，是Windows或MacOS的合适替代品。多种桌面环境可通过我们的官方和社区版本。我们还与制造商合作设计专用硬件。
@@ -22,6 +22,35 @@
 [双显示器polybar启动脚本](./polybar_config/launch.py)
 
 
+# 我的linux 配置更新了 
+ps ： 忘了更新了
+
+
+我用的是arch+i3wm+polybar
+
+- 简要说一下arch+i3的引导配置吧， 防止忘了
+- arch 装 xorg xorg-xinit 当然还有i3
+- 在~/.xinitrc 配置:
+~~~~~~~~~~~~~~shell
+(base) xtcc@xtccarch:~/small_parking.github.io (master *) $ cat ~/.xinitrc                  
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
+# 前三个是输入法的配置
+
+export LANG="zh_CN.UTF-8"
+export LC_CTYPE="zh_CN.UTF-8"
+exec i3 # 这个是启动i3的配置
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~shell
+
+cat ~/.zprofile # 放到用户目录下 达到登录即启动i3
+startx
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
