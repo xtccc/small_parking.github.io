@@ -1,0 +1,47 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+# 在arch的 live environment 中
+
+~~~~~~~~~~~~~~~~~~~~shell
+loadkeys colemak 
+# 使console的字体布局变成colemak
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# 在arch的系统中
+
+~~~~~~~~~~~~~~~~~~~~shell
+#增加（或编辑）/etc/vconsole.conf
+
+(base) xtcc@xtccarch:~ $ cat /etc/vconsole.conf                                                      
+KEYMAP=colemak
+KEYMAP_TOGGLE=colemak
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+## 达到这样的结果就行了
+~~~~~~~~~~~~~~~~~~~~shell
+(base) xtcc@xtccarch:~ $  localectl
+   System Locale: LANG=C
+       VC Keymap: colemak
+VC Toggle Keymap: colemak
+      X11 Layout: us
+       X11 Model: colemak
+     X11 Variant: colemak
+     X11 Options: colemak
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
