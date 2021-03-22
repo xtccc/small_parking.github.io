@@ -1,0 +1,49 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slate.css?">
+[首页][blog_link]
+
+# 起因： 
+## 我本来用的是networkmanager ， 但是公司要同时连接内外网。 但是networkManager同时连接网线和wifi会使得wifi断开连接
+~~~~~~~~~~~~~~~~~shell
+#大概会每隔几分钟掉线
+DHCPv4: trying to acquire a new lease within 90 seconds
+~~~~~~~~~~~~~~~~~~~~~~
+## 在archlinux wiki 上发现可以用其他网络管理工具
+
+# 安装netctl
+~~~~~~~~~~~~~~~shell
+sudo pacman -S netctl
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+# 修改配置文件
+~~~~~~~~~~~~~~~~~~~shell
+cd /etc/netctl
+sudo cp examples/ethernet-static .
+#修改Interface 和 Address 即可
+
+sudo cp examples/wireless-wpa .
+#修改 Interface ，ESSID 和Key
+~~~~~~~~~~~~~~~~~~~~
+
+# 使用netctl启动网络
+~~~~~~~~~~~~~~~~~~~~shell
+
+sudo netctl start ethernet-static
+sudo netctl start wireless-wpa
+
+
+# 测试配置的没问题 用enable 开启开机自启动
+sudo netctl enable ethernet-static
+sudo netctl enable wireless-wpa
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#更多资料
+
+[netctl]("https://wiki.archlinux.org/index.php/Netctl_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)")
+
+
+
+
+[blog_link]:https://xtccc.github.io/small_parking.github.io/
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'long'};</script>
+<!-- Markdeep: --><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+
