@@ -11,7 +11,7 @@ loadkeys colemak
 
 # 在arch的系统中
 
-~~~~~~~~~~~~~~~~~~~~shell
+~~~~~~~~~~~~~~~~~~~~shell 
 #增加（或编辑）/etc/vconsole.conf
 
 (base) xtcc@xtccarch:~ $ cat /etc/vconsole.conf                                                      
@@ -34,7 +34,23 @@ VC Toggle Keymap: colemak
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+## 或者这种方法，修改00-keyboard.conf 文件的"XkbVariant" 为us 和 colemak
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~shell
+
+cat /etc/X11/xorg.conf.d/00-keyboard.conf
+# Written by systemd-localed(8), read by systemd-localed and Xorg. It's
+# probably wise not to edit this file manually. Use localectl(1) to
+# instruct systemd-localed to update it.
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "us"
+        Option "XkbModel" "us"
+	Option "XkbVariant" "us"
+EndSection
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
